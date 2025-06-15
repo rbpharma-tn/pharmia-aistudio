@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Générateur de Mémofiches</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Simulate process.env.API_KEY for browser environment if not set by a build tool
+    // In a real production build, this would be handled by the build process (e.g., Vite, Webpack)
+    // For this exercise, we assume it's available or set it to a placeholder if needed for development.
+    // The instructions state "Assume this variable is pre-configured, valid, and accessible".
+    if (typeof process === 'undefined') {
+      window.process = { env: { API_KEY: 'AIzaSyDafNiLXfEJcU1JcoKmPfTIsNRYS3pFDZA' } };
+    } else if (!process.env || !process.env.API_KEY) {
+      process.env = { ...process.env, API_KEY: 'AIzaSyDafNiLXfEJcU1JcoKmPfTIsNRYS3pFDZA' };
+    }
+     // You can set a dummy key for UI development if you don't make actual API calls.
+     // IMPORTANT: Replace 'YOUR_GEMINI_API_KEY_HERE' with a real key or ensure your environment provides it.
+     // For this deliverable, the code will use process.env.API_KEY as instructed.
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

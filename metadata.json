@@ -1,0 +1,5 @@
+{
+  "name": "Générateur de Mémofiches",
+  "description": "Une application web pour générer des mémofiches (fiches de révision) en utilisant l'IA, à partir de diverses sources d'information.",
+  "requestFramePermissions": []
+}
